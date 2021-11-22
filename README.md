@@ -50,4 +50,5 @@ Simple React Component with stages and substages.
         ]
       }
     ]
-  }```
+  }
+```
