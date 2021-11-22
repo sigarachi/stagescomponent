@@ -1,8 +1,8 @@
-import React, {useState, useEffect, useCallback} from 'react';
+import React, {useState} from 'react';
 import Substage from '../Substage/Substage';
 import './Stage.css';
 
-const Stage = ({stage}) => {
+const Stage = ({stage, updateStage, curStage}) => {
     const [current, setCurrent] = useState(1)
 
     const updateCurrent = () => {
@@ -21,7 +21,8 @@ const Stage = ({stage}) => {
             <div className="stg-body">
                 {stage.substages.map((substage, index) => {
                     const isLast = (index + 1) === stage.substages.length ? true : false;
-                    return <Substage key={index} substage={substage} setCurrent={updateCurrent} position={index+1} current={current} isLast={isLast} />
+                    const cur = curStage ? current : 4;
+                    return <Substage key={index} substage={substage} setCurrent={updateCurrent} position={index+1} current={cur} isLast={isLast} />
                 })}
             </div>
         </div>

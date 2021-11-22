@@ -9,21 +9,21 @@ function App() {
         substages:[
           {
             title: "Регистрация",
-            completed: true,
+            status: "completed",
             info:  "Пройдите регистрацию",
             documents: [],
             controllers: []
           },
           {
             title: "Одобрение партнера",
-            completed: true,
+            status: "completed",
             info: "Получите одобрение партнера",
             documents: [],
             controllers: []
           },
           {
             title: "Анкета ожидает согласования",
-            completed: false,
+            status: "progress",
             info: "Подпишите и отправьте оригиналы документов менеджеру",
             documents: [
               {
@@ -41,6 +41,18 @@ function App() {
                 link: "https://www.google.com"
               }
             ]
+          },
+        ]
+      },
+      {
+        title: "Этап 2: Торговые точки",
+        substages:[
+          {
+            title: "Заполните описание точек",
+            status: "waiting",
+            info:  "",
+            documents: [],
+            controllers: []
           },
         ]
       }

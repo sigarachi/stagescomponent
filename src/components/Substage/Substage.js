@@ -8,7 +8,9 @@ const Substage = ({substage, setCurrent, position , current, isLast}) => {
         <div className={`sb-stg ${position===current ? "current" : " "}`}>
             <div className="sb-stg-main">
                 <div className="sb-stg-status">
-                    {substage.completed ? <img className="completed" src="./resources/icons/check.svg" alt="check"/> : <img className="completed" src="./resources/icons/in_progress_filled.svg" alt="in_progress"/>}
+                    {substage.status ==="completed" && <img className="completed" src="./resources/icons/check.svg" alt="check"/> }
+                    {substage.status ==="progress" && <img className="completed" src="./resources/icons/in_progress_filled.svg" alt="in_progress"/>}
+                    {substage.status ==="waiting" && <img className="completed" src="./resources/icons/wait.svg" alt="wait"/>}
                 </div>
                 <div className={`sb-stg-title ${position===current ? "bold" : " "}`}>
                     {substage.title}
