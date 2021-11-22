@@ -7,7 +7,7 @@ Simple React Component with stages and substages.
 ## JSON Format
 
 ```json
-{
+
     stages:[
       {
         title: "Этап 1: Проверка компании",
@@ -50,5 +50,5 @@ Simple React Component with stages and substages.
         ]
       }
     ]
-  }
+  
 ```
