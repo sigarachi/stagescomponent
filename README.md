@@ -40,7 +40,7 @@ Simple React Component with stages and substages.
                 "link": "https://www.google.com"
               }
             ],
-            controllers: [
+            "controllers": [
               {
                 "title": "Перейти в заявку",
                 "link": "https://www.google.com"
