@@ -55,7 +55,9 @@ function App() {
             controllers: []
           },
         ]
-      }
+      },
+      //Instert new data here 
+      
     ]
   })
 

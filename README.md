@@ -15,7 +15,43 @@ Simple React Component with stages and substages.
 | ![wait](https://github.com/sigarachi/stagescomponent/blob/master/public/resources/icons/wait.svg) | Используется для обозначения этапа, который еще не был выполнен и еще не находится в работе | `waiting` | 
 
 
-## JSON Format
+## User Guide
+
+### Stage Format
+
+Все поля свойства `stages` являются обязательными (могут быть пустыми, но не могут равняться *`NULL` or `undefined`*): 
+
+| Поле | Описание | Тип данных |
+| --- | --- | --- |
+| title | Имя этапа | Строка |
+| substages | Подэтапы | Массив объектов |
+
+
+### Substage Format
+
+Все поля свойства `substages` являются обязательными (могут быть пустыми, но не могут равняться *`NULL` or `undefined`*): 
+
+| Поле | Описание | Тип данных |
+| --- | --- | --- |
+| title | Имя этапа | Строка |
+| status | Статус выполнения этапа | Строка |
+| info | Информация/Текст отображаемый пользователю | Строка |
+| documents | Документы | Массив объектов |
+| controllers | Кнопки/Ссылки | Массив объектов |
+
+
+### Documents & Controllers Format
+
+| Поле | Описание | Тип данных |
+| --- | --- | --- |
+| title | Имя этапа | Строка |
+| link |  Ссылка | Строка |
+
+
+
+
+
+### JSON-Object Example
 
 ```json
 {
