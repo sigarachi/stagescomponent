@@ -7,12 +7,12 @@ Simple React Component with stages and substages.
 
 ## Icons & Meanings 
 
-| Icon | Description | 
-| --- | --- |
-| ![download](https://github.com/sigarachi/stagescomponent/blob/master/public/resources/icons/download.svg) | Используется при обозначении файла, доступного для скачивания | 
-| ![check](https://github.com/sigarachi/stagescomponent/blob/master/public/resources/icons/check.svg) | Используется для обозначения выполненного этапа | 
-| ![in_progress](https://github.com/sigarachi/stagescomponent/blob/master/public/resources/icons/in_progress_filled.svg) | Используется для обозначения этапа, находящегося в работе ( в данный момент ) | 
-| ![wait](https://github.com/sigarachi/stagescomponent/blob/master/public/resources/icons/wait.svg) | Используется для обозначения этапа, который еще не был выполнен и еще не находится в работе | 
+| Icon | Description | Status |
+| --- | --- | --- |
+| ![download](https://github.com/sigarachi/stagescomponent/blob/master/public/resources/icons/download.svg) | Используется при обозначении файла, доступного для скачивания | - |
+| ![check](https://github.com/sigarachi/stagescomponent/blob/master/public/resources/icons/check.svg) | Используется для обозначения выполненного этапа | `completed` |
+| ![in_progress](https://github.com/sigarachi/stagescomponent/blob/master/public/resources/icons/in_progress_filled.svg) | Используется для обозначения этапа, находящегося в работе ( в данный момент ) | `progress` |
+| ![wait](https://github.com/sigarachi/stagescomponent/blob/master/public/resources/icons/wait.svg) | Используется для обозначения этапа, который еще не был выполнен и еще не находится в работе | `waiting` | 
 
 
 ## JSON Format
