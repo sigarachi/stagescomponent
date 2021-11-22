@@ -14,21 +14,21 @@ Simple React Component with stages and substages.
         "substages":[
           {
             "title": "Регистрация",
-            "completed": true,
+            "status": "completed",
             "info":  "Пройдите регистрацию",
             "documents": [],
             "controllers": []
           },
           {
             "title": "Одобрение партнера",
-            "completed": true,
+            "status": "completed",
             "info": "Получите одобрение партнера",
             "documents": [],
             "controllers": []
           },
           {
             "title": "Анкета ожидает согласования",
-            "completed": false,
+            "status": "progress",
             "info": "Подпишите и отправьте оригиналы документов менеджеру",
             "documents": [
               {
