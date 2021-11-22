@@ -1,0 +1,14 @@
+.stg{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.stg-title{
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.stg-body{
+    margin-top: 1.5rem;
+}

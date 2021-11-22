@@ -1,23 +1,55 @@
-import logo from './logo.svg';
-import './App.css';
+import React,{useState} from 'react';
+import StagesComponent from './components/StagesComponent/StagesComponent';
 
 function App() {
+  const [data, setData] = useState({
+    stages:[
+      {
+        title: "Этап 1: Проверка компании",
+        substages:[
+          {
+            title: "Регистрация",
+            completed: true,
+            info:  "Пройдите регистрацию",
+            documents: [],
+            controllers: []
+          },
+          {
+            title: "Одобрение партнера",
+            completed: true,
+            info: "Получите одобрение партнера",
+            documents: [],
+            controllers: []
+          },
+          {
+            title: "Анкета ожидает согласования",
+            completed: false,
+            info: "Подпишите и отправьте оригиналы документов менеджеру",
+            documents: [
+              {
+                title: "Заявление о присоединении",
+                link: "https://www.google.com"
+              }, 
+              {
+                title: "Договор оферты",
+                link: "https://www.google.com"
+              }
+            ],
+            controllers: [
+              {
+                title: "Перейти в заявку",
+                link: "https://www.google.com"
+              }
+            ]
+          },
+        ]
+      }
+    ]
+  })
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <StagesComponent props={data.stages} />
     </div>
   );
 }

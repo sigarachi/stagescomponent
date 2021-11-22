@@ -1,0 +1,9 @@
+.doc{
+    display: flex;
+    flex-direction: row;
+    margin: 0.4rem 0;
+}
+
+.doc-title{
+    margin: 0.08rem 0.2rem;
+}
