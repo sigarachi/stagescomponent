@@ -17,27 +17,66 @@ Simple React Component with stages and substages.
 
 ## User Guide
 
-### Stage Format
-
-Все поля свойства `stages` являются обязательными (могут быть пустыми, но не могут равняться *`NULL` or `undefined`*): 
-
-| Поле | Описание | Тип данных |
-| --- | --- | --- |
-| title | Имя этапа | Строка |
-| substages | Подэтапы | Массив объектов |
+### Stage
 
 
-### Substage Format
-
-Все поля свойства `substages` являются обязательными (могут быть пустыми, но не могут равняться *`NULL` or `undefined`*): 
+Все поля свойства `stages` являются обязательными (`title` может быть пустым, но оба поля не могут равняться *`NULL` or `undefined`*): 
 
 | Поле | Описание | Тип данных |
 | --- | --- | --- |
 | title | Имя этапа | Строка |
+| unique_name | Уникальное имя объекта | Строка |
+
+Все объекты данного типа хранятся в файле `/data/stages.json`
+
+```json
+
+{
+  "stages":[
+      {
+          "title": "Этап 1: Проверка компании",
+          "unique_name": "first"
+      },
+      {
+         "title": "Этап 2: Торговые точки",
+         "unique_name":"second"
+      }
+  ]
+}
+
+```
+
+
+### Substage
+
+Все поля свойства `substages` являются обязательными (`ref` и `unique_name` не могут быть пустыми, все поля не могут равняться *`NULL` or `undefined`*): 
+
+| Поле | Описание | Тип данных |
+| --- | --- | --- |
+| title | Имя этапа | Строка |
+| ref | Имя `stage` внутри которого находится данный подэтап | Строка |
+| unique_name | Уникальное имя объекта | Строка |
 | status | Статус выполнения этапа | Строка |
 | info | Информация/Текст отображаемый пользователю | Строка |
-| documents | Документы | Массив объектов |
-| controllers | Кнопки/Ссылки | Массив объектов |
+
+Все объекты данного типа хранятся в файле `/data/substages.json`
+
+
+```json
+
+{
+    "substages":[
+        {
+            "title": "Регистрация",
+            "unique_name": "reg",
+            "ref" : "first",
+            "status": "completed",
+            "info":  "Пройдите регистрацию"
+        }
+    ]
+}
+
+```
 
 
 ### Documents & Controllers Format
@@ -45,57 +84,30 @@ Simple React Component with stages and substages.
 | Поле | Описание | Тип данных |
 | --- | --- | --- |
 | title | Имя этапа | Строка |
+| ref | Имя `substage` внутри которого находится данный объект | Строка |
 | link |  Ссылка | Строка |
 
 
+Documents хранятся в файле `/data/documents.json`
+Controllers хранятся в файле `/data/controllers.json`
 
-
-
-### JSON-Object Example
 
 ```json
+
 {
-    "stages":[
-      {
-        "title": "Этап 1: Проверка компании",
-        "substages":[
-          {
-            "title": "Регистрация",
-            "status": "completed",
-            "info":  "Пройдите регистрацию",
-            "documents": [],
-            "controllers": []
-          },
-          {
-            "title": "Одобрение партнера",
-            "status": "completed",
-            "info": "Получите одобрение партнера",
-            "documents": [],
-            "controllers": []
-          },
-          {
-            "title": "Анкета ожидает согласования",
-            "status": "progress",
-            "info": "Подпишите и отправьте оригиналы документов менеджеру",
-            "documents": [
-              {
-                "title": "Заявление о присоединении",
-                "link": "https://www.google.com"
-              }, 
-              {
-                "title": "Договор оферты",
-                "link": "https://www.google.com"
-              }
-            ],
-            "controllers": [
-              {
-                "title": "Перейти в заявку",
-                "link": "https://www.google.com"
-              }
-            ]
-          },
-        ]
-      }
+    "documents": [
+        {
+            "title": "Заявление о присоединении",
+            "ref" : "ank",
+            "link": "https://www.google.com"
+        }, 
+        {
+            "title": "Договор оферты",
+            "ref" : "ank",
+            "link": "https://www.google.com"
+        }
     ]
-  }
+}
+
+
 ```
