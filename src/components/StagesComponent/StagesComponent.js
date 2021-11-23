@@ -24,7 +24,7 @@ const StagesComponent = ({props}) => {
             </div>
             {props.map((prop, index) => {
                 const curStage = index + 1 === stage ? true : false;
-                return <Stage stage={prop} updateStage={updateStage} curStage={curStage} setCurrentStage={setCurrentStage} myPosition={index + 1} />
+                return <Stage key={index} stage={prop} updateStage={updateStage} curStage={curStage} setCurrentStage={setCurrentStage} myPosition={index + 1} />
             })}
         </div>
     );

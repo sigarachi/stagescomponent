@@ -11,8 +11,8 @@ const Substage = ({substage, setCurrent, position , current, isLast, setSubStage
 
 
     return (
-        <div className={`sb-stg ${position===current ? "current" : " "}`} onClick={setThis}>
-            <div className="sb-stg-main" style={{cursor: "pointer"}}>
+        <div className={`sb-stg ${position===current ? "current" : " "}`} >
+            <div className="sb-stg-main" style={{cursor: "pointer"}} onClick={setThis}>
                 <div className="sb-stg-status">
                     {substage.status ==="completed" && <img className="completed" src="./resources/icons/check.svg" alt="check"/> }
                     {substage.status ==="progress" && <img className="completed" src="./resources/icons/in_progress_filled.svg" alt="in_progress"/>}

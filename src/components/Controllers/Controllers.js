@@ -3,8 +3,8 @@ import React from 'react';
 const Controllers = ({controllers}) => {
     return (
         <>
-            {controllers.map(controller => {
-                return <a className="ctrl" href={controller.link}>{controller.title}</a>
+            {controllers.map((controller, index) => {
+                return <a key={index} className="ctrl" href={controller.link}>{controller.title}</a>
             })}
         </>
     );
