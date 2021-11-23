@@ -88,7 +88,7 @@ Simple React Component with stages and substages.
 | link |  Ссылка | Строка |
 
 
-Documents хранятся в файле `/data/documents.json`
+Documents хранятся в файле `/data/documents.json`. 
 Controllers хранятся в файле `/data/controllers.json`
 
 
