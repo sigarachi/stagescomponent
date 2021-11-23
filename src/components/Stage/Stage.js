@@ -13,6 +13,11 @@ const Stage = ({stage, updateStage, curStage}) => {
         
     }
 
+    const setSubStage = (value) => {
+        const newValue = value;
+        setCurrent(newValue)
+    }
+
     return (
         <div className="stg">
             <div className="stg-title">
@@ -22,7 +27,7 @@ const Stage = ({stage, updateStage, curStage}) => {
                 {stage.substages.map((substage, index) => {
                     const isLast = (index + 1) === stage.substages.length ? true : false;
                     const cur = curStage ? current : 4;
-                    return <Substage key={index} substage={substage} setCurrent={updateCurrent} position={index+1} current={cur} isLast={isLast} />
+                    return <Substage key={index} substage={substage} setCurrent={updateCurrent} position={index+1} current={cur} isLast={isLast} setSubStage={setSubStage} />
                 })}
             </div>
         </div>
