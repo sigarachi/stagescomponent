@@ -27,7 +27,7 @@ Simple React Component with stages and substages.
 | title | Имя этапа | Строка |
 | unique_name | Уникальное имя объекта | Строка |
 
-Все объекты данного типа хранятся в файле `/data/stages.json`
+Все объекты данного типа хранятся в файле `/src/data/stages.json`
 
 ```json
 
@@ -59,7 +59,7 @@ Simple React Component with stages and substages.
 | status | Статус выполнения этапа | Строка |
 | info | Информация/Текст отображаемый пользователю | Строка |
 
-Все объекты данного типа хранятся в файле `/data/substages.json`
+Все объекты данного типа хранятся в файле `/src/data/substages.json`
 
 
 ```json
@@ -88,8 +88,8 @@ Simple React Component with stages and substages.
 | link |  Ссылка | Строка |
 
 
-Documents хранятся в файле `/data/documents.json`. 
-Controllers хранятся в файле `/data/controllers.json`
+Documents хранятся в файле `/src/data/documents.json`. 
+Controllers хранятся в файле `/src/data/controllers.json`
 
 
 ```json
