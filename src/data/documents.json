@@ -1,0 +1,14 @@
+{
+    "documents": [
+        {
+            "title": "Заявление о присоединении",
+            "ref" : "ank",
+            "link": "https://www.google.com"
+        }, 
+        {
+            "title": "Договор оферты",
+            "ref" : "ank",
+            "link": "https://www.google.com"
+        }
+    ]
+}

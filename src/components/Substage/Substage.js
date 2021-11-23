@@ -1,13 +1,43 @@
-import React from 'react';
+import React, {useState, useEffect, useCallback} from 'react';
 import Controllers from '../Controllers/Controllers';
 import Documentslist from '../DocumentsList/DocumentsList';
+import Docs from '../../data/documents.json'
+import Control from '../../data/controllers.json'
 import './Substage.css';
 
 const Substage = ({substage, setCurrent, position , current, isLast, setSubStage}) => {
 
+    const [docs, setDocs] = useState([])
+    const [ctrl, setCtrl] = useState([])
+
+    const setupAll = useCallback(() => {
+        let arr = []
+        Docs.documents.map(doc => {
+            if(doc.ref === substage.unique_name){
+                arr.push(doc)
+            }
+        })
+        setDocs(arr)
+        arr = []
+
+        Control.controllers.map(controller => {
+            if(controller.ref === substage.unique_name){
+                arr.push(controller)
+            }
+        })
+        setCtrl(arr)
+    },[substage])
+
+
+    useEffect(() => {
+        setupAll()
+    },[setupAll])
+
     const setThis = () => {
         setSubStage(position);
     }
+
+
 
 
     return (
@@ -28,15 +58,15 @@ const Substage = ({substage, setCurrent, position , current, isLast, setSubStage
                     <div className="sb-stg-info">
                         {substage.info}
                     </div>
-                    {substage.documents.length > 0 ? 
+                    {docs.length > 0 ? 
                         <div className="sb-stg-documents">
-                            <Documentslist documents={substage.documents} /> 
+                            <Documentslist documents={docs} /> 
                         </div> 
                     : <></>}
                    
-                   {substage.controllers.length > 0 ? 
+                   {ctrl.length > 0 ? 
                         <div className="controllers">
-                            <Controllers controllers={substage.controllers} /> 
+                            <Controllers controllers={ctrl} /> 
                         </div> : 
                     <></>}
                    {!isLast &&  
