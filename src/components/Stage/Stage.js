@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import Substage from '../Substage/Substage';
 import './Stage.css';
 
-const Stage = ({stage, updateStage, curStage}) => {
+const Stage = ({stage, updateStage, curStage, setCurrentStage, myPosition}) => {
     const [current, setCurrent] = useState(1)
 
     const updateCurrent = () => {
@@ -18,9 +18,13 @@ const Stage = ({stage, updateStage, curStage}) => {
         setCurrent(newValue)
     }
 
+    const setStage = () => {
+        setCurrentStage(myPosition)
+    }
+
     return (
         <div className="stg">
-            <div className="stg-title">
+            <div className="stg-title" onClick={setStage} style={{cursor: 'pointer'}}>
                 {stage.title}
             </div>
             <div className="stg-body">
