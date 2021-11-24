@@ -17,7 +17,7 @@
                     "type": "container",
                     "element": "Substage",
                     "href": "none",
-                    "icon": "waiting",
+                    "icon": "progress",
                     "components": [
                         {
                             "text": "Пользовательское соглашение",
