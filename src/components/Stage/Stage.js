@@ -1,29 +1,16 @@
 import React, {useState, useEffect, useCallback} from 'react';
+import Componentsbuilder from '../ComponentsBuilder/ComponentsBuilder';
 import Substage from '../Substage/Substage';
-import substages from '../../data/substages.json'
 import './Stage.css';
 
-const Stage = ({stage, updateStage, curStage, setCurrentStage, myPosition}) => {
+const Stage = ({props, logic}) => {
     const [current, setCurrent] = useState(1)
     const [sub, setSub] = useState([])
 
 
-    const setSubs = useCallback(() => {
-        const arr = []
-        substages.substages.map(substage => {
-            if(substage.ref === stage.unique_name){
-                arr.push(substage)
-            }
-        })
-        setSub(arr)
-    },[stage])
-
-    useEffect(() => {
-        setSubs()
-    }, [setSubs])
 
     const updateCurrent = () => {
-        if(current + 1 <= sub.length) {
+        if(current + 1 <= props.components.length) {
             const newValue = current + 1;
             setCurrent(newValue)
         }
@@ -36,20 +23,24 @@ const Stage = ({stage, updateStage, curStage, setCurrentStage, myPosition}) => {
     }
 
     const setStage = () => {
-        setCurrentStage(myPosition)
+        logic.setCurrentStage(logic.pos)
     }
 
     return (
         <div className="stg">
             <div className="stg-title" onClick={setStage} style={{cursor: 'pointer'}}>
-                {stage.title}
+                {props.text}
             </div>
             <div className="stg-body">
-                {sub.map((substage, index) => {
-                    const isLast = (index + 1) === sub.length ? true : false;
-                    const cur = curStage ? current : sub.length + 1;
-                    
-                    return <Substage key={index} substage={substage} setCurrent={updateCurrent} position={index+1} current={cur} isLast={isLast} setSubStage={setSubStage} />
+                {props.components.map((prop, index) => {
+                    const isLast = (index + 1) === props.components.length ? true : false;
+                    const cur = logic.curStage ? current : props.components.length + 1;
+                    const pos = index +1;
+
+                    console.log(prop)
+                    return <Componentsbuilder input={prop} logic={{updateCurrent, pos, cur, isLast, setSubStage}} />
+
+                    //return <Substage key={index} props={prop} setCurrent={updateCurrent} position={index+1} current={cur} isLast={isLast} setSubStage={setSubStage} />
                     
                 })}
             </div>

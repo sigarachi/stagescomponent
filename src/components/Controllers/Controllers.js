@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Controllers = ({controllers}) => {
+const Controllers = ({props}) => {
     return (
         <>
-            {controllers.map((controller, index) => {
-                return <a key={index} className="ctrl" href={controller.link}>{controller.title}</a>
-            })}
+            
+            <a className="ctrl" href={props.href}>{props.text}</a>
+           
         </>
     );
 }

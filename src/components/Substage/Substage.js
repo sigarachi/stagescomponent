@@ -1,77 +1,46 @@
 import React, {useState, useEffect, useCallback} from 'react';
+import Componentsbuilder from '../ComponentsBuilder/ComponentsBuilder';
 import Controllers from '../Controllers/Controllers';
 import Documentslist from '../DocumentsList/DocumentsList';
-import Docs from '../../data/documents.json'
-import Control from '../../data/controllers.json'
 import './Substage.css';
 
-const Substage = ({substage, setCurrent, position , current, isLast, setSubStage}) => {
+const Substage = ({props, logic}) => {
 
-    const [docs, setDocs] = useState([])
-    const [ctrl, setCtrl] = useState([])
-
-    const setupAll = useCallback(() => {
-        let arr = []
-        Docs.documents.map(doc => {
-            if(doc.ref === substage.unique_name){
-                arr.push(doc)
-            }
-        })
-        setDocs(arr)
-        arr = []
-
-        Control.controllers.map(controller => {
-            if(controller.ref === substage.unique_name){
-                arr.push(controller)
-            }
-        })
-        setCtrl(arr)
-    },[substage])
-
-
-    useEffect(() => {
-        setupAll()
-    },[setupAll])
 
     const setThis = () => {
-        setSubStage(position);
+        logic.setSubStage(logic.pos);
     }
 
 
-
-
     return (
-        <div className={`sb-stg ${position===current ? "current" : " "}`} >
+        <div className={`sb-stg ${logic.pos===logic.cur ? "current" : " "}`} >
             <div className="sb-stg-main" style={{cursor: "pointer"}} onClick={setThis}>
                 <div className="sb-stg-status">
-                    {substage.status ==="completed" && <img className="completed" src="./resources/icons/check.svg" alt="check"/> }
-                    {substage.status ==="progress" && <img className="completed" src="./resources/icons/in_progress_filled.svg" alt="in_progress"/>}
-                    {substage.status ==="waiting" && <img className="completed" src="./resources/icons/wait.svg" alt="wait"/>}
+
+                    <img className="completed" src={"./resources/icons/" + props.icon + ".svg"} alt="wait"/>
                 </div>
-                <div className={`sb-stg-title ${position===current ? "bold" : " "}`}>
-                    {substage.title}
+                <div className={`sb-stg-title ${logic.pos===logic.cur ? "bold" : " "}`}>
+                    {props.text}
                 </div>
             </div>
             <div className="sb-stg-body">
-                {position === current ? 
+                {logic.pos===logic.cur ? 
                 <>
                     <div className="sb-stg-info">
-                        {substage.info}
+                        {props.textHint}
                     </div>
-                    {docs.length > 0 ? 
+
+                    {props.components.length > 0 &&  
                         <div className="sb-stg-documents">
-                            <Documentslist documents={docs} /> 
+                            {props.components.map((prop, index) => {
+                                return <Componentsbuilder key={index} input={prop} />
+                            })}
                         </div> 
-                    : <></>}
-                   
-                   {ctrl.length > 0 ? 
-                        <div className="controllers">
-                            <Controllers controllers={ctrl} /> 
-                        </div> : 
-                    <></>}
-                   {!isLast &&  
+                        }
+                    
+                   {!logic.isLast &&  
                         <div className="next-stage">
-                            <button className="ctrl" onClick={setCurrent}>Следующий шаг</button>
+                            <button className="ctrl" onClick={logic.updateCurrent}>Следующий шаг</button>
                         </div>
                     }
                 </> : 
