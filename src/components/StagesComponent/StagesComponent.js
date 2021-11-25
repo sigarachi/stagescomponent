@@ -1,6 +1,5 @@
 import React,{useState} from 'react';
 import Componentsbuilder from '../ComponentsBuilder/ComponentsBuilder';
-import Stage from '../Stage/Stage';
 import './StagesComponent.css'
 
 const StagesComponent = ({props}) => {
@@ -28,7 +27,6 @@ const StagesComponent = ({props}) => {
                 const pos = index + 1
                 // eslint-disable-next-line no-sequences
                 return <Componentsbuilder input={prop} logic={{updateStage, curStage , setCurrentStage, pos}} />
-                //return <Stage key={index} stage={prop}  />
             })}
         </div>
     );

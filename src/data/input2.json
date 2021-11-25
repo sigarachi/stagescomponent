@@ -1,0 +1,271 @@
+{
+    "text": "Первые шаги",
+    "type": "container",
+    "element": "StageContainer",
+    "components": [
+        {
+            "text": "Этап 1",
+            "textHint": "Первый этап",
+            "type": "container",
+            "element": "Stage",
+            "href": "none",
+            "icon": "none",
+            "components": [
+                {
+                    "text": "Регистрация",
+                    "textHint": "Пройдите регистрацию",
+                    "type": "container",
+                    "element": "Substage",
+                    "href": "none",
+                    "icon": "waiting",
+                    "components": [
+                        {
+                            "text": "Логин",
+                            "textHint": "Введите данные",
+                            "type": "controller",
+                            "element": "input",
+                            "href": "www.google.com",
+                            "icon": "download",
+                            "components": []
+                        },
+                        {
+                            "text": "Пароль",
+                            "textHint": "Скачать",
+                            "type": "controller",
+                            "element": "input",
+                            "href": "www.google.com",
+                            "icon": "download",
+                            "components": []
+                        },
+                        {
+                            "text": "Пользовательское соглашение",
+                            "textHint": "Скачать",
+                            "type": "controller",
+                            "element": "link",
+                            "href": "www.google.com",
+                            "icon": "download",
+                            "components": []
+                        },
+                        {
+                            "text": "Правила ресурса",
+                            "textHint": "Скачать",
+                            "type": "controller",
+                            "element": "link",
+                            "href": "www.google.com",
+                            "icon": "download",
+                            "components": []
+                        }
+                    ]
+                },
+                {
+                    "text": "Получить одобрение",
+                    "textHint": "Получите одобрение",
+                    "type": "container",
+                    "element": "Substage",
+                    "href": "none",
+                    "icon": "waiting",
+                    "components": [
+                        {
+                            "text": "Пользовательское соглашение",
+                            "textHint": "Скачать",
+                            "type": "controller",
+                            "element": "link",
+                            "href": "www.google.com",
+                            "icon": "download",
+                            "components": []
+                        },
+                        {
+                            "text": "Правила ресурса",
+                            "textHint": "Скачать",
+                            "type": "controller",
+                            "element": "link",
+                            "href": "www.google.com",
+                            "icon": "download",
+                            "components": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "Этап 2",
+            "textHint": "Второй этап",
+            "type": "container",
+            "element": "Stage",
+            "href": "none",
+            "icon": "none",
+            "components": [
+                {
+                    "text": "Форма",
+                    "textHint": "Заполните форму",
+                    "type": "container",
+                    "element": "Substage",
+                    "href": "waiting",
+                    "icon": "waiting",
+                    "components": [
+                        {
+                            "text": "Текст",
+                            "textHint": "Введите текст",
+                            "type": "controller",
+                            "element": "input",
+                            "href": "www.google.com",
+                            "icon": "download",
+                            "components": []
+                        },
+                        {
+                            "text": "Другой текст",
+                            "textHint": "Введите другой текст",
+                            "type": "controller",
+                            "element": "input",
+                            "href": "www.google.com",
+                            "icon": "download",
+                            "components": []
+                        },
+                        {
+                            "text": "Кнопка",
+                            "textHint": "Нажать на кнопку",
+                            "type": "controller",
+                            "element": "Button",
+                            "href": "www.google.com",
+                            "icon": "none",
+                            "components": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "Этап 3",
+            "textHint": "Третий этап",
+            "type": "container",
+            "element": "Stage",
+            "href": "none",
+            "icon": "none",
+            "components": [
+                {
+                    "text": "Регистрация",
+                    "textHint": "Пройдите регистрацию",
+                    "type": "container",
+                    "element": "Substage",
+                    "href": "none",
+                    "icon": "waiting",
+                    "components": [
+                        {
+                            "text": "Пользовательское соглашение",
+                            "textHint": "Скачать",
+                            "type": "controller",
+                            "element": "link",
+                            "href": "www.google.com",
+                            "icon": "download",
+                            "components": []
+                        },
+                        {
+                            "text": "Правила ресурса",
+                            "textHint": "Скачать",
+                            "type": "controller",
+                            "element": "link",
+                            "href": "www.google.com",
+                            "icon": "download",
+                            "components": []
+                        }
+                    ]
+                },
+                {
+                    "text": "Получить одобрение",
+                    "textHint": "Получите одобрение",
+                    "type": "container",
+                    "element": "Substage",
+                    "href": "none",
+                    "icon": "waiting",
+                    "components": [
+                        {
+                            "text": "Пользовательское соглашение",
+                            "textHint": "Скачать",
+                            "type": "controller",
+                            "element": "link",
+                            "href": "www.google.com",
+                            "icon": "download",
+                            "components": []
+                        },
+                        {
+                            "text": "Правила ресурса",
+                            "textHint": "Скачать",
+                            "type": "controller",
+                            "element": "link",
+                            "href": "www.google.com",
+                            "icon": "download",
+                            "components": []
+                        }
+                    ]
+                },
+                {
+                    "text": "Ожидайте",
+                    "textHint": "Получите одобрение",
+                    "type": "container",
+                    "element": "Substage",
+                    "href": "none",
+                    "icon": "waiting",
+                    "components": [
+                        {
+                            "text": "Текст",
+                            "textHint": "Введите текст",
+                            "type": "controller",
+                            "element": "input",
+                            "href": "www.google.com",
+                            "icon": "download",
+                            "components": []
+                        },
+                        {
+                            "text": "Правила ресурса",
+                            "textHint": "Скачать",
+                            "type": "controller",
+                            "element": "link",
+                            "href": "www.google.com",
+                            "icon": "download",
+                            "components": []
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "text": "Этап 4",
+            "textHint": "Четвертый этап",
+            "type": "container",
+            "element": "Stage",
+            "href": "none",
+            "icon": "none",
+            "components": [
+                {
+                    "text": "Какой то подэтап",
+                    "textHint": "Пройдите подэтап",
+                    "type": "container",
+                    "element": "Substage",
+                    "href": "none",
+                    "icon": "waiting",
+                    "components": [
+                        
+                        {
+                            "text": "Кнопка",
+                            "textHint": "Как кнопка, только поле ввода",
+                            "type": "controller",
+                            "element": "input",
+                            "href": "www.google.com",
+                            "icon": "none",
+                            "components": []
+                        },
+                        {
+                            "text": "Кнопка",
+                            "textHint": "Нажать на кнопку",
+                            "type": "controller",
+                            "element": "Button",
+                            "href": "www.google.com",
+                            "icon": "none",
+                            "components": []
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

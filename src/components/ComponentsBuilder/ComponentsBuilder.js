@@ -4,6 +4,7 @@ import Stage from '../Stage/Stage';
 import Document from '../Document/Document';
 import StagesComponent from '../StagesComponent/StagesComponent';
 import Substage from '../Substage/Substage'
+import Input from '../Input/Input'
 
 const Componentsbuilder = ({input, logic}) => {
     switch (input.type) {
@@ -25,7 +26,8 @@ const Componentsbuilder = ({input, logic}) => {
                     return <Controllers props={input} />
                 case "link":
                     return <Document props={input} />
-                
+                case "input":
+                    return <Input props={input} />
                 default:
                     return 
             }

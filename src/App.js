@@ -1,6 +1,6 @@
 import React from 'react';
 import Componentsbuilder from './components/ComponentsBuilder/ComponentsBuilder';
-import input from './data/input.json'
+import input from './data/input2.json'
 
 function App() {
   return (

@@ -33,7 +33,7 @@ const Stage = ({props, logic}) => {
     return (
         <div className="stg">
             <div className="stg-title" onClick={setStage} style={{cursor: 'pointer'}}>
-                {props.text}  {props.icon !== 'none' ? <img src={"/resources/icons/" + props.icon + ".svg"} alt="icon" /> : <></>}
+                {props.text}  {props.icon !== 'none' ? <img className="completed" src={"/resources/icons/" + props.icon + ".svg"} alt="icon" /> : <></>}
             </div>
             <div className="stg-body">
                 {props.components.map((prop, index) => {

@@ -6,17 +6,13 @@ import './Substage.css';
 
 const Substage = ({props, logic}) => {
 
-
     const setThis = () => {
         logic.setSubStage(logic.pos);
     }
-
     const updateThis = () => {
         props.icon = "completed"
         logic.updateCurrent()
     }
-
-
     return (
         <div className={`sb-stg ${logic.pos===logic.cur ? "current" : " "}`} >
             <div className="sb-stg-main" style={{cursor: "pointer"}} onClick={setThis}>
@@ -42,12 +38,9 @@ const Substage = ({props, logic}) => {
                             })}
                         </div> 
                         }
-                    
-                    
                         <div className="next-stage">
                             <button className="ctrl" onClick={updateThis}>Следующий шаг</button>
                         </div>
-                    
                 </> : 
                 <></>}
             </div>
