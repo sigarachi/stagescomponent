@@ -14,6 +14,10 @@ const Stage = ({props, logic}) => {
             const newValue = current + 1;
             setCurrent(newValue)
         }
+        else{
+            props.icon= "completed"
+            logic.updateStage()
+        }
         
     }
 
@@ -29,7 +33,7 @@ const Stage = ({props, logic}) => {
     return (
         <div className="stg">
             <div className="stg-title" onClick={setStage} style={{cursor: 'pointer'}}>
-                {props.text}
+                {props.text}  {props.icon !== 'none' ? <img src={"/resources/icons/" + props.icon + ".svg"} alt="icon" /> : <></>}
             </div>
             <div className="stg-body">
                 {props.components.map((prop, index) => {
@@ -37,6 +41,9 @@ const Stage = ({props, logic}) => {
                     const cur = logic.curStage ? current : props.components.length + 1;
                     const pos = index +1;
 
+                    if(cur === pos && prop.icon !== "completed"){
+                        prop.icon="progress"
+                    }
                     console.log(prop)
                     return <Componentsbuilder input={prop} logic={{updateCurrent, pos, cur, isLast, setSubStage}} />
 

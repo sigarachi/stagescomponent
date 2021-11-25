@@ -11,6 +11,11 @@ const Substage = ({props, logic}) => {
         logic.setSubStage(logic.pos);
     }
 
+    const updateThis = () => {
+        props.icon = "completed"
+        logic.updateCurrent()
+    }
+
 
     return (
         <div className={`sb-stg ${logic.pos===logic.cur ? "current" : " "}`} >
@@ -38,11 +43,11 @@ const Substage = ({props, logic}) => {
                         </div> 
                         }
                     
-                   {!logic.isLast &&  
+                    
                         <div className="next-stage">
-                            <button className="ctrl" onClick={logic.updateCurrent}>Следующий шаг</button>
+                            <button className="ctrl" onClick={updateThis}>Следующий шаг</button>
                         </div>
-                    }
+                    
                 </> : 
                 <></>}
             </div>
