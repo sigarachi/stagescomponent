@@ -32,7 +32,7 @@ const Substage = ({props}) => {
                     </div>
                         {props.innerComponents.length > 0 ? <div className="sb-stg-documents">
                             {props.innerComponents.map((prop, index) => {
-                                const Component = AllComponent[prop.type]
+                                const Component = AllComponent[prop.name]
                                 return <Component key={index} props={prop} />
                             })}
                         </div> : <></>}

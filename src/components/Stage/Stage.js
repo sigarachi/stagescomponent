@@ -50,7 +50,7 @@ const Stage = ({props}) => {
                     prop.position = pos
                     prop.updateCurrent = updateCurrent
                     prop.setCurrent = setSubStage
-                    const Component = AllComponent[prop.type]
+                    const Component = AllComponent[prop.name]
                     return <Component key={index} props={prop} />
                 })}
             </div>

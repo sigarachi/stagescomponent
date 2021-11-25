@@ -32,7 +32,7 @@ const StagesComponent = ({props}) => {
                 prop.updateStage = updateStage
                 prop.setCurrentStage = setCurrentStage
 
-                const Component = AllComponent[prop.type]
+                const Component = AllComponent[prop.name]
                 return <Component key={index} props={prop} />
             })}
         </div>
