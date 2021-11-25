@@ -1,3 +1,9 @@
 export {default as Someprop} from "./StagesComponent/SomeProp";
 export {default as Stage} from "./Stage/Stage";
 export {default as Substage} from "./Substage/Substage";
+export {default as Document} from './Document/Document'
+export {default as Input} from "./Input/Input"
+export {default as Inputradio} from "./Input/InputRadio"
+export {default as Checkbox} from "./Input/CheckBox"
+export {default as Img} from "./Img/Img"
+export {default as Button} from "./Controllers/Controllers"

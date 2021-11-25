@@ -1,30 +1,121 @@
 {
     "type" : "StagesComponent",
     "text" : "Первые шаги",
-    "stagesCount": "2",
+    "data": {
+        "stagesCount": "2"
+    },
     "innerComponents":[
         {
             "type": "Stage",
             "text": "Этап 1",
-            "subStagesCount":"1",
+            "data": {
+                "subStagesCount": "2"
+            },
             "innerComponents":[
                 {
                     "type": "Substage",
-                    "text": "Регистрация",
-                    "innerComponents":[]
+                    "text": "Form",
+                    "data": {
+                        "textHint": "Пройдите регистрацию"
+                    },
+                    "innerComponents":[
+                        {
+                            "type": "Input",
+                            "text": "Логин",
+                            "innerComponents":[]
+                        },
+                        {
+                            "type": "Input",
+                            "text": "Пароль",
+                            "innerComponents":[]
+                        },
+                        {
+                            "type": "Document",
+                            "text": "Под-подэтап",
+                            "data": {
+                                "link": "https://github.com/sigarachi/stagescomponent"
+                            },
+                            "innerComponents":[]
+                        }
+                    ]
                 },
                 {
                     "type": "Substage",
-                    "text": "Регистрация",
-                    "innerComponents":[]
+                    "text": "InputRadio",
+                    "data": {
+                        "textHint": ""
+                    },
+                    "innerComponents":[
+                        {
+                            "type": "Inputradio",
+                            "text": "Логин",
+                            "innerComponents":[]
+                        }
+                    ]
                 }
             ]
         },
         {
             "type": "Stage",
             "text": "Этап 2",
-            "subStagesCount":"0",
-            "innerComponents":[]
+            "data": {
+                "subStagesCoubt": "3"
+            },
+            "innerComponents":[
+                {
+                    "type": "Substage",
+                    "text": "CheckBox",
+                    "data": {
+                        "textHint": ""
+                    },
+                    "innerComponents":[
+                        {
+                            "type": "Input",
+                            "text": "Логин",
+                            "innerComponents":[]
+                        },
+                        {
+                            "type": "Checkbox",
+                            "text": "Подтвердить",
+                            "innerComponents":[]
+                        },
+                        {
+                            "type": "Document",
+                            "text": "Какой-то документ",
+                            "data": {
+                                "link": "https://github.com/sigarachi/stagescomponent"
+                            },
+                            "innerComponents":[]
+                        }
+                    ]
+                },
+                {
+                    "type": "Substage",
+                    "text": "Img & Buttons",
+                    "data": {
+                        "textHint": ""
+                    },
+                    "innerComponents":[
+                        {
+                            "type": "Img",
+                            "text": "Картинка",
+                            "data": {
+                                "link" : "https://sun9-14.userapi.com/impg/c857416/v857416876/1f2a55/MaQUD94h6Lc.jpg?size=720x680&quality=96&sign=7ddc8d60ef1fad90b294d361eb08def8&type=album"
+                            },
+                            "innerComponents":[]
+                        },
+                        {
+                            "type": "Button",
+                            "text": "Кликни",
+                            "data": {
+                                "link" : "https://github.com/sigarachi/stagescomponent"
+                            },
+                            "innerComponents":[]
+                        }
+                        
+                    ]
+                }
+            ]
         }
     ]
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import * as AllComponent from '../index'
 import './Substage.css';
 
 
@@ -27,9 +28,14 @@ const Substage = ({props}) => {
                 {props.position===props.current ? 
                 <>
                     <div className="sb-stg-info">
-                        {props.textHint}
+                        {props.data.textHint}
                     </div>
-
+                        {props.innerComponents.length > 0 ? <div className="sb-stg-documents">
+                            {props.innerComponents.map((prop, index) => {
+                                const Component = AllComponent[prop.type]
+                                return <Component key={index} props={prop} />
+                            })}
+                        </div> : <></>}
                         <div className="next-stage">
                             <button className="ctrl" onClick={updateThis}>Следующий шаг</button>
                         </div>

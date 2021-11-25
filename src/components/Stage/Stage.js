@@ -25,7 +25,7 @@ const Stage = ({props}) => {
     }
 
     const setStage = () => {
-        props.setCurrentStage(props.pos)
+        props.setCurrentStage(props.position)
     }
 
     return (

@@ -4,7 +4,7 @@ const Controllers = ({props}) => {
     return (
         <>
             
-            <a className="ctrl" href={props.href}>{props.text}</a>
+            <a className="ctrl" href={props.data.link}>{props.text}</a>
            
         </>
     );
