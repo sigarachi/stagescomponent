@@ -1,0 +1,30 @@
+{
+    "type" : "StagesComponent",
+    "text" : "Первые шаги",
+    "stagesCount": "2",
+    "innerComponents":[
+        {
+            "type": "Stage",
+            "text": "Этап 1",
+            "subStagesCount":"1",
+            "innerComponents":[
+                {
+                    "type": "Substage",
+                    "text": "Регистрация",
+                    "innerComponents":[]
+                },
+                {
+                    "type": "Substage",
+                    "text": "Регистрация",
+                    "innerComponents":[]
+                }
+            ]
+        },
+        {
+            "type": "Stage",
+            "text": "Этап 2",
+            "subStagesCount":"0",
+            "innerComponents":[]
+        }
+    ]
+}

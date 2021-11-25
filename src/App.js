@@ -1,11 +1,11 @@
 import React from 'react';
-import Componentsbuilder from './components/ComponentsBuilder/ComponentsBuilder';
-import input from './data/input2.json'
+import StagesComponent from './components/StagesComponent/StagesComponent';
+import input from './data/test.json'
 
 function App() {
   return (
     <div className="App">
-      <Componentsbuilder input={input} />
+      <StagesComponent props={{...input}} />
     </div>
   );
   
