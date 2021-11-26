@@ -1,0 +1,125 @@
+{
+    "name" : "StagesComponent",
+    "text" : "Первые шаги",
+    "data": {
+        "stagesCount": "2"
+    },
+    "innerComponents":[
+        {
+            "name": "Stage",
+            "text": "Этап 1",
+            "data": {
+                "subStagesCount": "3"
+            },
+            "innerComponents":[
+                {
+                    "name": "Substage",
+                    "text": "Регистрация",
+                    "data": {
+                        "textHint": "Пройдите регистрацию"
+                    },
+                    "innerComponents":[
+                        {
+                            "name": "Input",
+                            "text": "Логин",
+                            "innerComponents":[]
+                        },
+                        {
+                            "name": "Input",
+                            "text": "Пароль",
+                            "innerComponents":[]
+                        },
+                        {
+                            "name": "Checkbox",
+                            "text": "Принимаю пользовательское соглашение",
+                            "data": {
+                                "link": "https://github.com/sigarachi/stagescomponent"
+                            },
+                            "innerComponents":[]
+                        }
+                    ]
+                },
+                {
+                    "name": "Substage",
+                    "text": "Одобрение партнера",
+                    "data": {
+                        "textHint": "Получите одобрение партнера"
+                    },
+                    "innerComponents":[
+                        {
+                            "name": "Document",
+                            "text": "Рекомендации",
+                            "data": {
+                                "link": "https://github.com/sigarachi/stagescomponent"
+                            },
+                            "innerComponents":[]
+                        }
+                    ]
+                },
+                {
+                    "name": "Substage",
+                    "text": "Анкета ожидает согласования",
+                    "data": {
+                        "textHint": "Подпишите и отправьте оригиналы документов менеджеру"
+                    },
+                    "innerComponents":[
+                        {
+                            "name": "Document",
+                            "text": "Заявление о присоединении",
+                            "data": {
+                                "link": "https://github.com/sigarachi/stagescomponent"
+                            },
+                            "innerComponents":[]
+                        },
+                        {
+                            "name": "Document",
+                            "text": "Договор оферты",
+                            "data": {
+                                "link": "https://github.com/sigarachi/stagescomponent"
+                            },
+                            "innerComponents":[]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "name": "Stage",
+            "text": "Этап 2",
+            "data": {
+                "subStagesCoubt": "3"
+            },
+            "innerComponents":[
+                {
+                    "name": "Substage",
+                    "text": "Заполните описание точек",
+                    "data": {
+                        "textHint": "Описание точек"
+                    },
+                    "innerComponents":[
+                        {
+                            "name": "Input",
+                            "text": "Название точки",
+                            "innerComponents":[]
+                        },
+                      
+                        {
+                            "name": "Textarea",
+                            "text": "Какой-то документ",
+                            "data": {
+                                "rows": "5",
+                                "cols": "57"
+                            },
+                            "innerComponents":[]
+                        },
+                        {
+                            "name": "Checkbox",
+                            "text": "Подтвердить информацию",
+                            "innerComponents":[]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
