@@ -35,11 +35,11 @@
 
 ```css
     .stgs-component{
-        width: 30rem;   //Высота
-        height: 50rem;  //Ширина
-        background-color: #eaeaea; //Цвет фона
+        width: 30rem;   /* Высота */
+        height: 50rem;  /* Ширина */
+        background-color: #eaeaea; /* Цвет фона */
         border-radius: 15px;
-        //Отступы
+        /* Отступы */
         padding-top: 2rem;
         margin-top: 2rem;
         padding-left: 2rem;
@@ -47,11 +47,6 @@
         overflow: auto;
     }
 ```
-Компонент представляет собой прямоугольник высотой 50rem и шириной 30rem. 
-Отступы компонента `padding: 2rem 2rem 0 2rem;` 
-При превышении заданных размеров появляется scroll, позволяющий перемещаться внутри компонента (`overflow: auto;`)
-Цвет фона компонента `background-color: #eaeaea;`
-Параметры отображения `display: block;`
 
 Измение параметров стиля объекта на данный момент невозможно
 
