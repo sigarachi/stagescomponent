@@ -5,7 +5,8 @@ import input from './data/test.json'
 function App() {
   return (
     <div className="App">
-      <StagesComponent props={{...input}} />
+      <StagesComponent props={{...input.input[0]}} />
+      <StagesComponent props={{...input.input[1]}} />
     </div>
   );
   
