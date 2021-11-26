@@ -47,3 +47,8 @@ body{
 .w-100{
     width: 100%;
 }
+
+.spacer {
+    height: 1rem;
+    border-bottom: 0.3px solid gray;
+}

@@ -9,14 +9,14 @@ const StagesComponent = ({props}) => {
 
     const updateStage = () => {
         if(props.innerComponents.length >= stage + 1) {
-            const newValue = stage + 1
-            setStage(newValue)
+            const newValue = stage + 1;
+            setStage(newValue);
         }
     }
 
     const setCurrentStage = (value) => {
         const newValue = value;
-        setStage(newValue)
+        setStage(newValue);
     }
 
     return (
@@ -26,14 +26,20 @@ const StagesComponent = ({props}) => {
             </div>
             {props.innerComponents.length > 0 &&  props.innerComponents.map((prop, index) => {
                 const curStage = index + 1 === stage ? true : false;
-                const pos = index + 1
-                prop.position = pos
-                prop.current = curStage
-                prop.updateStage = updateStage
-                prop.setCurrentStage = setCurrentStage
+                const pos = index + 1;
+                prop.position = pos;
+                prop.current = curStage;
+                prop.updateStage = updateStage;
+                prop.setCurrentStage = setCurrentStage;
 
-                const Component = AllComponent[prop.name]
-                return <Component key={index} props={prop} />
+                const Component = AllComponent[prop.name];
+                return(<>
+                <Component key={index} props={prop} />    
+                   {index + 1 !== props.innerComponents.length ?  <div className="spacer">
+
+                    </div> : <></>
+                    }
+                </>) 
             })}
         </div>
     );

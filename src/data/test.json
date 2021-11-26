@@ -9,12 +9,12 @@
             "name": "Stage",
             "text": "Этап 1",
             "data": {
-                "subStagesCount": "2"
+                "subStagesCount": "3"
             },
             "innerComponents":[
                 {
                     "name": "Substage",
-                    "text": "Form",
+                    "text": "Регистрация",
                     "data": {
                         "textHint": "Пройдите регистрацию"
                     },
@@ -30,8 +30,8 @@
                             "innerComponents":[]
                         },
                         {
-                            "name": "Document",
-                            "text": "Под-подэтап",
+                            "name": "Checkbox",
+                            "text": "Принимаю пользовательское соглашение",
                             "data": {
                                 "link": "https://github.com/sigarachi/stagescomponent"
                             },
@@ -41,14 +41,42 @@
                 },
                 {
                     "name": "Substage",
-                    "text": "InputRadio",
+                    "text": "Одобрение партнера",
                     "data": {
-                        "textHint": ""
+                        "textHint": "Получите одобрение партнера"
                     },
                     "innerComponents":[
                         {
-                            "name": "Inputradio",
-                            "text": "Логин",
+                            "name": "Document",
+                            "text": "Рекомендации",
+                            "data": {
+                                "link": "https://github.com/sigarachi/stagescomponent"
+                            },
+                            "innerComponents":[]
+                        }
+                    ]
+                },
+                {
+                    "name": "Substage",
+                    "text": "Анкета ожидает согласования",
+                    "data": {
+                        "textHint": "Подпишите и отправьте оригиналы документов менеджеру"
+                    },
+                    "innerComponents":[
+                        {
+                            "name": "Document",
+                            "text": "Заявление о присоединении",
+                            "data": {
+                                "link": "https://github.com/sigarachi/stagescomponent"
+                            },
+                            "innerComponents":[]
+                        },
+                        {
+                            "name": "Document",
+                            "text": "Договор оферты",
+                            "data": {
+                                "link": "https://github.com/sigarachi/stagescomponent"
+                            },
                             "innerComponents":[]
                         }
                     ]
@@ -64,55 +92,31 @@
             "innerComponents":[
                 {
                     "name": "Substage",
-                    "text": "CheckBox",
+                    "text": "Заполните описание точек",
                     "data": {
-                        "textHint": ""
+                        "textHint": "Описание точек"
                     },
                     "innerComponents":[
                         {
                             "name": "Input",
-                            "text": "Логин",
+                            "text": "Название точки",
+                            "innerComponents":[]
+                        },
+                      
+                        {
+                            "name": "Textarea",
+                            "text": "Какой-то документ",
+                            "data": {
+                                "rows": "5",
+                                "cols": "57"
+                            },
                             "innerComponents":[]
                         },
                         {
                             "name": "Checkbox",
-                            "text": "Подтвердить",
-                            "innerComponents":[]
-                        },
-                        {
-                            "name": "Document",
-                            "text": "Какой-то документ",
-                            "data": {
-                                "link": "https://github.com/sigarachi/stagescomponent"
-                            },
+                            "text": "Подтвердить информацию",
                             "innerComponents":[]
                         }
-                    ]
-                },
-                {
-                    "name": "Substage",
-                    "text": "Img & Buttons",
-                    "data": {
-                        "textHint": ""
-                    },
-                    "innerComponents":[
-                        {
-                            "name": "Img",
-                            "text": "Картинка",
-                            "data": {
-                                "link" : "https://sun9-14.userapi.com/impg/c857416/v857416876/1f2a55/MaQUD94h6Lc.jpg?size=720x680&quality=96&sign=7ddc8d60ef1fad90b294d361eb08def8&type=album"
-                            },
-                            "innerComponents":[]
-                        },
-                        {
-                            "name": "Button",
-                            "text": "Кликни",
-                            "data": {
-                                "link" : "https://github.com/sigarachi/stagescomponent"
-                            },
-                            "innerComponents":[]
-                        }
-                        
                     ]
                 }
             ]

@@ -2,13 +2,21 @@
     margin-top: 2rem;
     display: flex;
     flex-direction: column;
+
+
 }
 
 .stg-title{
     font-weight: bold;
     font-size: 1.2em;
+    display: flex;
+}
+
+.stg-img{
+    margin-left: 0.5rem;
+    height: 1.5rem;
 }
 
 .stg-body{
-    margin-top: 1.5rem;
+    margin-top: 1rem;
 }

@@ -1,11 +1,12 @@
 import React from 'react';
+import './Input.css'
 
 const Checkbox = ({props}) => {
     return (
-        <>
-            <input type="checkbox" name="checkbox" />
-            <label htmlFor="checkbox" style={{marginLeft: "2rem"}}>{props.text}</label>
-        </>
+        <div className="checkbox">
+            <input type="checkbox" name="checkbox" className="checkbox-input" />
+            <label htmlFor="checkbox" className="checkbox-label" >{props.text}</label>
+        </div>
     );
 }
 

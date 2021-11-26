@@ -13,7 +13,7 @@ const Stage = ({props}) => {
             setCurrent(newValue)
         }
         else{
-            props.icon= "completed"
+            props.icon= "done"
             props.updateStage()
         }
         
@@ -32,6 +32,9 @@ const Stage = ({props}) => {
         <div className="stg">
             <div className="stg-title" onClick={setStage} style={{cursor: 'pointer'}}>
                 {props.text}  
+                {props.icon === 'done' ? <div className="stg-img">
+                    <img className="completed"  src={"./resources/icons/" + props.icon + ".svg"} alt="wait"/>
+                </div> : <></>}
             </div>
             <div className="stg-body">
                 {props.innerComponents.map((prop, index) => {
@@ -54,6 +57,8 @@ const Stage = ({props}) => {
                     return <Component key={index} props={prop} />
                 })}
             </div>
+
+         
         </div>
     );
 }
