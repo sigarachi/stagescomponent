@@ -6,18 +6,7 @@
 
 Компонент-контейнер с заголовком и внутренними компонентами
 
-
 ## Спецификация
-
-### Иконки & Значения 
-
-| Icon | Description | Status |
-| --- | --- | --- |
-| ![download](https://github.com/sigarachi/stagescomponent/blob/master/public/resources/icons/download.svg) | Используется при обозначении файла, доступного для скачивания | - |
-| ![check](https://github.com/sigarachi/stagescomponent/blob/master/public/resources/icons/completed.svg) | Используется для обозначения выполненного этапа | `completed` |
-| ![in_progress](https://github.com/sigarachi/stagescomponent/blob/master/public/resources/icons/progress.svg) | Используется для обозначения этапа, находящегося в работе ( в данный момент ) | `progress` |
-| ![wait](https://github.com/sigarachi/stagescomponent/blob/master/public/resources/icons/waiting.svg) | Используется для обозначения этапа, который еще не был выполнен и еще не находится в работе | `waiting` | 
-
 
 ### Входные данные
 
@@ -64,7 +53,5 @@ const setCurrentStage = (int) => {
 
 
 ```
-
-
 
 
