@@ -55,3 +55,33 @@ body{
     height: 1rem;
     border-bottom: 0.3px solid gray;
 }
+
+.spacer-with-line {
+    height: 2rem;
+    width: 0.98rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 2px solid gray;
+}
+
+.spacer-line{
+    height: 2rem;
+    width: 1px;
+    color: gray;
+}
+
+.completed{
+    transition: 0.4s ease-in-out;
+    border-color: #5ca74b;
+}
+
+.progress {
+    transition: 0.4s ease-in-out;
+    border-color: #ffb600;
+}
+
+.waiting{
+    transition: 0.4s ease-in-out;
+    border-color:#b6b9b7;
+}

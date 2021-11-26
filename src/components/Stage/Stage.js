@@ -54,7 +54,14 @@ const Stage = ({props}) => {
                     prop.updateCurrent = updateCurrent
                     prop.setCurrent = setSubStage
                     const Component = AllComponent[prop.name]
-                    return <Component key={index} props={prop} />
+                    return (
+                        <>
+                        <Component key={index} props={prop} />
+                          {index + 1 !== props.innerComponents.length ?   <div className={"spacer-with-line " + prop.icon + "" }>
+                               
+                            </div> : <></>}
+                        </>
+                    )
                 })}
             </div>
 
