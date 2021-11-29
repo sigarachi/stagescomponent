@@ -1,10 +1,18 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import * as AllComponent from '../index'
 import './Substage.css';
 
 
+const defaultStyle = {
+    display: "flex",
+    flexDirection: "column",
+    height: "1.8rem"
+}
+
 
 const Substage = ({props}) => {
+    const [styles, setStyles] = useState(defaultStyle)
+
 
     const setThis = () => {
         props.setCurrent(props.position);
@@ -13,6 +21,15 @@ const Substage = ({props}) => {
         props.icon = "completed"
         props.updateCurrent()
     }
+
+
+    useEffect(() => {
+        if(props.styles !== undefined && props.styles !== null){
+            setStyles(props.styles)
+        }
+    },[props])
+
+
     return (
         <div className={`sb-stg ${props.position===props.current ? "current" : " "}`} >
             <div className="sb-stg-main" style={{cursor: "pointer"}} onClick={setThis}>

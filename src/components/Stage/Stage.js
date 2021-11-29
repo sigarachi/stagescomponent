@@ -1,11 +1,16 @@
-import React,{useState} from 'react';
+import React,{useState, useEffect} from 'react';
 import * as AllComponent from '../index'
 import './Stage.css';
 
-
+const defaultStyle = {
+    marginTop: "1rem",
+    display: "flex",
+    flexDirection: "column"
+}
 
 const Stage = ({props}) => {
     const [current, setCurrent] = useState(1)
+    const [styles, setStyles] = useState(defaultStyle)
 
     const updateCurrent = () => {
         if(current + 1 <= props.innerComponents.length) {
@@ -28,8 +33,14 @@ const Stage = ({props}) => {
         props.setCurrentStage(props.position)
     }
 
+    useEffect(() => {
+        if(props.styles !== undefined && props.styles !== null){
+            setStyles(props.styles)
+        }
+    },[props])
+
     return (
-        <div className="stg">
+        <div className="stg" style={styles}>
             <div className="stg-title" onClick={setStage} style={{cursor: 'pointer'}}>
                 {props.text}  
                 {props.icon === 'done' ? <div className="stg-img">

@@ -1,11 +1,23 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import * as AllComponent from '../index'
 import './StagesComponent.css'
 
+const defaultStyle = {
+    width: "30rem",
+    height: "50rem",
+    backgroundColor: "#eaeaea",
+    borderRadius: "15px",
+    paddingTop: "2rem",
+    marginTop: "2rem",
+    paddingLeft: "2rem",
+    paddingRight: "2rem",
+    overflow: "auto"
+}
 
 
 const StagesComponent = ({props}) => {
     const [stage, setStage] = useState(1)
+    const [styles, setStyles] = useState(defaultStyle)
 
     const updateStage = () => {
         if(props.innerComponents.length >= stage + 1) {
@@ -19,8 +31,14 @@ const StagesComponent = ({props}) => {
         setStage(newValue);
     }
 
+    useEffect(() => {
+        if(props.styles !== undefined && props.styles !== null){
+            setStyles(props.styles)
+        }
+    },[props])
+
     return (
-        <div className="stgs-component">
+        <div className="stgs-component" style={styles}>
             <div className="stgs-title">
                 <h2>{props.text}</h2>
             </div>
