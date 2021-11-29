@@ -1,6 +1,6 @@
 # Компонент StagesComponent
 
-Можете опробовать ![тут]("https://stagecomponent.herokuapp.com") 
+Можете опробовать [тут](https://stagecomponent.herokuapp.com) 
 
 ## Краткое Описание 
 
