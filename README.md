@@ -42,7 +42,7 @@
         }
      
     ```
-    
+
 * Код передаваемых функций
 
 ```js
@@ -66,8 +66,7 @@ const setCurrentStage = (int) => {
 
 ```
 
-
-### Стили 
+### Стили
 
 ```css
     .stgs-component{
@@ -87,8 +86,111 @@ const setCurrentStage = (int) => {
 Измение параметров стиля объекта на данный момент невозможно
 
 
+# Компонент Stages
+
+## Краткое описание
+
+Компонент-контейнер с заголовком и внутренними компонентами
 
 ## Спецификация Stages
+
+
+
+### Входные данные
+
+```js
+
+    const props = {
+        name : "Stage",
+        position: pos,
+        current: currentStage,
+        updateStage: updateStage,
+        setCurrentStage: setCurrentStage,
+        text: "Заголовок компонента",
+        innerComponents: []
+    }
+
+```
+
+### Алгоритм работы компонента
+
+* На вход компоненту подаются `props` с параметрами согласно Входным Данным;
+* Устанавливается заголовок компонента;
+* Обработка массива innerComponents:
+    * Класс компонента определяется по его полю `props.name`
+    * Производится присоединение переданных функций к компоненту
+    * Для каждого из элементов вызывается функция `render()`
+    * Формируется дополнительный набор `props` для вложенного компонента:
+
+    ```js
+        const props = {
+            name : "Stage",
+            position: pos,
+            current: currentStage,
+            updateCurrent: updateCurrent,
+            setSubStage: setSubStage,
+            text: "Заголовок компонента",
+            innerComponents: []
+        }
+     
+    ```
+* Код передаваемых функций
+
+```js
+
+const updateCurrent = () => {
+    if(current + 1 <= props.innerComponents.length) {
+        const newValue = current + 1;
+        setCurrent(newValue)
+    }
+    else{
+        props.icon= "done"
+        props.updateStage()
+    }
+    
+}
+
+const setSubStage = (value) => {
+    const newValue = value;
+    setCurrent(newValue)
+}
+
+```
+
+### Стили
+
+```css
+
+.stg{
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.stg-title{
+    font-weight: bold;
+    font-size: 1.2em;
+    display: flex;
+}
+
+.stg-img{
+    margin-left: 0.5rem;
+    height: 1.5rem;
+}
+
+.stg-body{
+    margin-top: 1rem;
+}
+
+```
+
+### Иконки & Значения 
+
+| Icon | Description | Status |
+| --- | --- | --- |
+| ![done](https://github.com/sigarachi/stagescomponent/blob/master/public/resources/icons/done.svg) | Обозначает выполненный этап | `done` |
+
+
 
 ### Иконки & Значения 
 
