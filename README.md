@@ -29,10 +29,10 @@
     * Класс компонента определяется по его полю `props.name`
     * Для каждого из элементов вызывается функция `render()`
     * Формируется дополнительный набор `props` для вложенного компонента:
-    
+
     ```js
         const props = {
-            name : "StagesComponent",
+            name : "Stage",
             position: pos,
             current: currentStage,
             updateStage: updateStage,
